@@ -65,7 +65,7 @@ function resetar() {
  * @param {number} numeroDaCor
  * @returns Promise
  */
-async function piscar(numeroDaCor) {
+function piscar(numeroDaCor) {
     let cor = obterCorDeNumero(numeroDaCor);
     setTimeout(() => {
         console.log(`Piscando ${numeroDaCor}`);
@@ -89,7 +89,6 @@ function sortear() {
 
 /**
  * Mostra a ordem das cores sorteadas.
- * @async
  */
 function mostrarCoresSorteadas() {
     console.log("Mostrando cores sorteadas");
@@ -100,7 +99,7 @@ function mostrarCoresSorteadas() {
 
 /**
  * Executa funções decorrentes do clique em determinada cor.
- * @param {Number} numeroDaCor 
+ * @param {number} numeroDaCor 
  */
 function clicar(numeroDaCor) {
     console.log(`Recebendo clique em ${numeroDaCor}`);
