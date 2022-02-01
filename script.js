@@ -67,11 +67,11 @@ function resetar() {
  */
 function piscar(numeroDaCor, numero) {
     let cor = obterCorDeNumero(numeroDaCor);
-    let tempo = numero * 1000;
+    let tempo = numero * 500;
     setTimeout(() => {
         console.log(`Piscando ${numeroDaCor}`);
         cor.classList.add('selected');
-    }, tempo / 20);
+    }, tempo / 2);
     setTimeout(() => {
         cor.classList.remove('selected');
         console.log(`Terminando de piscar ${numeroDaCor}`);
