@@ -65,16 +65,17 @@ function resetar() {
  * @param {number} numeroDaCor
  * @returns Promise
  */
-function piscar(numeroDaCor) {
+function piscar(numeroDaCor, numero) {
     let cor = obterCorDeNumero(numeroDaCor);
+    let tempo = numero * 1000;
     setTimeout(() => {
         console.log(`Piscando ${numeroDaCor}`);
         cor.classList.add('selected');
-    }, 500);
+    }, tempo / 20);
     setTimeout(() => {
         cor.classList.remove('selected');
         console.log(`Terminando de piscar ${numeroDaCor}`);
-    }, 1000);
+    }, tempo);
 }
 
 /**
@@ -93,7 +94,7 @@ function sortear() {
 function mostrarCoresSorteadas() {
     console.log("Mostrando cores sorteadas");
     for (let i = 0; i < ordemSorteada.length; i++) {
-        piscar(ordemSorteada[i]);
+        piscar(ordemSorteada[i], i + 1);
     }
 }
 
